@@ -22,7 +22,7 @@ def magia(matriz,tupla,direc):
 		matriz[fil-1,col]='S'
 		nada=False
 		habs=True
-	if matriz[fil,col+1]='B':
+	if matriz[fil,col+1]=='B':
 		matriz[fil,col+1]='O'
 		nada=False
 		habo=True
