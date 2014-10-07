@@ -1,4 +1,5 @@
 from numpy import *
+from funciones import *
 matriz=array([['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],

@@ -5,6 +5,6 @@ def directo(gana, matriz):
 		matriz[4, i] = "M"
 	for i in range(3):
 		matriz[i+1, 0] = "M"
-		matriz[i+1, 6] = "M"
+		matriz[i+1, 5] = "M"
 	return matriz
 
