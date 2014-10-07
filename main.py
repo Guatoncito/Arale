@@ -11,24 +11,30 @@ elif evitar<9:
         matriz[2,evitar-4]='P'
 else:
         matriz[3,evitar-8]='P'
-ganar=int(raw_input("Ingrese casilla a la cual desea llegar:"))
+ganar = evitar
+while ganar == evitar:
+        ganar=int(raw_input("Ingrese casilla a la cual desea llegar:"))
 if ganar<5:
         matriz[1,ganar]='G'
         gana=(1,ganar)
-elif evitar<9:
+elif ganar<9:
         matriz[2,ganar-4]='G'
         gana=(2,ganar-4)
 else:
         matriz[3,ganar-8]='G'
         gana=(3,ganar-8)
-muro=int(raw_input("Ingrese casilla no accesible:"))
+muro = ganar
+while muro == ganar or muro == evitar:
+        muro=int(raw_input("Ingrese casilla no accesible:"))
 if muro<5:
-        matriz[1,perder]='M'
+        matriz[1,muro]='M'
 elif muro<9:
-        matriz[2,perder-4]='M'
+        matriz[2,muro-4]='M'
 else:
-        matriz[3,perder-8]='M'
-inicio=int(raw_input("Ingrese casilla de inicio:"))
+        matriz[3,muro-8]='M'
+inicio = ganar
+while inicio == ganar or inicio == muro or inicio == evitar:
+        inicio=int(raw_input("Ingrese casilla de inicio:"))
 if inicio<5:
         matriz[1,inicio]='I'
 elif inicio<9:
