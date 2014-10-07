@@ -1,5 +1,9 @@
 from numpy import *
+<<<<<<< HEAD
+from funciones import *
+=======
 import funciones
+>>>>>>> origin/master
 matriz=array([['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],
