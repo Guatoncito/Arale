@@ -71,13 +71,13 @@ if fil==2:
 			matriz[col-1]='E'
 if fil==3:
 	if matriz[2,col]=='B':
-		matriz[2,col]='N'
+		matriz[2,col]='S'
 		if matriz[2,col+1]=='B':
 			matriz[2,col+1]='O'
 		if matriz[2,col-1]=='B':
 			matriz[2,col-1]='E'
 		if matriz[1,col]=='B':
-			matriz[1,col]='N'
+			matriz[1,col]='S'
 			if matriz[1,col+1]=='B':
 				matriz[1,col+1]='O'
 			if matriz[1,col-1]=='B':
