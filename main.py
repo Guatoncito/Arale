@@ -1,4 +1,5 @@
 from numpy import *
+import funciones
 matriz=array([['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],
 	          ['B','B','B','B','B','B'],
@@ -41,4 +42,62 @@ elif inicio<9:
         matriz[2,inicio-4]='I'
 else:
         matriz[3,inicio-8]='I'
-
+fil,col=gana
+if fil==1:
+	if matriz[2,col]=='B':
+		matriz[2,col]='N'
+		if matriz[2,col+1]=='B':
+			matriz[2,col+1]='O'
+		if matriz[2,col-1]=='B':
+			matriz[2,col-1]='E'
+		if matriz[3,col]=='B':
+			matriz[3,col]='N'
+			if matriz[3,col+1]=='B':
+				matriz[3,col+1]='O'
+			if matriz[3,col-1]=='B':
+				matriz[3,col-1]='E'
+if fil==2:
+	if matriz[1,col]=='B':
+		matriz[1,col]='S'
+		if matriz[1,col+1]=='B':
+			matriz[1,col+1]='O'
+		if matriz[1,col-1]=='B':
+			matriz[1,col-1]='E'
+	if matriz[3,col]=='B':
+		matriz[3,col]='N'
+		if matriz[3,col+1]=='B':
+			matriz[3,col+1]='O'
+		if matriz[3,col-1]=='B':
+			matriz[col-1]='E'
+if fil==3:
+	if matriz[2,col]=='B':
+		matriz[2,col]='N'
+		if matriz[2,col+1]=='B':
+			matriz[2,col+1]='O'
+		if matriz[2,col-1]=='B':
+			matriz[2,col-1]='E'
+		if matriz[1,col]=='B':
+			matriz[1,col]='N'
+			if matriz[1,col+1]=='B':
+				matriz[1,col+1]='O'
+			if matriz[1,col-1]=='B':
+				matriz[1,col-1]='E'
+if col==1:
+	if matriz[fil,2]=='B':
+		matriz[fil,2]='O'
+		if matriz[fil+1,2]=='B':
+			matriz[fil+1]='N'
+		if matriz[fil-1,2]=='B':
+			matriz[fil-1,2]='S'
+		if matriz[fil,3]=='B':
+			matriz[fil,3]='O'
+			if matriz[fil+1,3]=='B':
+				matriz[fil+1,3]='N'
+			if matriz[fil-1,3]=='B':
+				matriz[fil-1,3]='S'
+			if matriz[fil,4]=='B':
+				matriz[fil,4]='O'
+				if matriz[fil+1,4]=='B':
+					matriz[fil+1,4]='N'
+				if matriz[fil-1,4]=='B':
+					matriz[fil-1,4]='S'
