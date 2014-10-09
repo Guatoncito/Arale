@@ -33,6 +33,9 @@ elif muro<9:
         matriz[2,muro-4]='M'
 else:
         matriz[3,muro-8]='M'
+inicio = ganar
+while inicio == ganar or inicio == muro or inicio == evitar:
+        inicio=int(raw_input("Ingrese casilla de inicio:"))
 fil,col=gana
 matriz=directo(matriz)
 if fil==1:
@@ -56,3 +59,15 @@ elif fil==3:
 	matriz=magia(matriz,(fil-1,col),'O')
 	matriz=magia(matriz,(fil-2,col),'E')
 	matriz=magia(matriz,(fil-2,col),'O')
+if inicio<5:
+        letra=matriz[1,inicio]
+        letra='I'
+        matriz[1,inicio]=letra
+elif inicio<9:
+        letra=matriz[2,inicio-4]
+        letra='I'
+        matriz[2,inicio-4]=letra
+else:
+        letra=matriz[3,inicio-8]
+        letra='I'
+        matriz[3,inicio-8]=letra

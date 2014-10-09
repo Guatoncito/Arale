@@ -24,11 +24,11 @@ def magia(matriz,tupla,direc):
 	if matriz[fil,col+1]=='B':
 		matriz[fil,col+1]='O'
 		nada=False
-		habo=True
+		habe=True
 	if matriz[fil,col-1]=='B':
 		matriz[fil,col-1]='E'
 		nada=False
-		habe=True
+		habo=True
 	if nada:
 		return matriz
 	if direc=='E' and habe:
