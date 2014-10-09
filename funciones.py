@@ -1,5 +1,4 @@
-def directo(gana, matriz):
-	x,y = gana
+def directo(matriz):
 	for i in range(6):
 		matriz[0, i] = "M"
 		matriz[4, i] = "M"
@@ -34,10 +33,18 @@ def magia(matriz,tupla,direc):
 		return matriz
 	if direc=='E' and habe:
 		return magia(matriz,(fil,col+1),'E')
+	elif direc=='E' and not habe:
+		return matriz
 	if direc=='N' and habn:
 		return magia(matriz,(fil-1,col),'N')
+	elif direc=='N' and not habn:
+		return matriz
 	if direc=='O' and habo:
 		return magia(matriz,(fil,col-1),'O')
+	elif direc=='O' and not habo:
+		return matriz
 	if direc=='S' and habs:
 		return magia(matriz,(fil+1,col),'S')
+	elif direc=='S' and not habs:
+		return matriz
 
